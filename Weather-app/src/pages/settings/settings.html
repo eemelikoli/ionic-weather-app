@@ -6,13 +6,24 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>settings</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Settings</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-card *ngFor="let item of items">
+                <ion-card-header>
+                    <ion-card-title>Here is a card</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    Here goes card content
+                </ion-card-content>
+            </ion-card>
+        </ion-row>
+    </ion-grid>
 </ion-content>
