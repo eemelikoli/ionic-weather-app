@@ -16,14 +16,30 @@
 <ion-content>
     <ion-grid>
         <ion-row>
-            <ion-card *ngFor="let item of items">
+            <ion-col width-100>
+                <ion-list>
+                    <form (ngSubmit)="saveLocation()">
+                        <ion-item>
+                            <ion-label fixed>City:</ion-label>
+                            <ion-input [(ngModel)]="city" name="city" type="text"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label fixed>Country:</ion-label>
+                            <ion-input [(ngModel)]="country" name="country" type="text"></ion-input>
+                        </ion-item>
+
+                        <button ion-button type="submit" block>Save changes</button>
+                    </form>
+                </ion-list>
+            </ion-col>
+            <!--ion-card *ngFor="let item of items">
                 <ion-card-header>
                     <ion-card-title>Here is a card</ion-card-title>
                 </ion-card-header>
                 <ion-card-content>
                     Here goes card content
                 </ion-card-content>
-            </ion-card>
+            </ion-card-->
         </ion-row>
     </ion-grid>
 </ion-content>
